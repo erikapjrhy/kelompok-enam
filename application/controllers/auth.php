@@ -40,4 +40,8 @@ function logout(){
 	$this-> session-> session_destroy();
 	redirect ('');
 }
+function data_pelanggan(){
+	 $data = array('data'=>$this->models->data_pelanggan());
+        $this->load->view('v_data_pelanggan',$data);
+}
 }

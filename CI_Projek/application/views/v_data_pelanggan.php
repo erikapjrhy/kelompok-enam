@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>CRUD</title>
+	<title>CRUD Edit_Pelanggan</title>
 
 	<style type="text/css">
 
@@ -68,11 +68,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>CRUD</h1>
+	<h1>CRUD Edit_Pelanggan</h1>
 
 	<div id="body">
-		<table> 
-		<tr>
+		<table borders="1">
+			<thead>
+				<tr>
 			<td>id_pelanggan</td>
 			<td>nama</td>
 			<td>username</td>
@@ -80,10 +81,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<td>email</td>
 			<td>alamat</td>
 			<td>no_telp</td>
-			<td>jenis_kelamin</td>
-			
-		</tr>
-
+			<td>jenis_kelamin</td></tr>
+			</thead>
+			<tbody>
+					<?php
+					$autonum=1;
+					foreach ($data as $x):
+					$id_pelanggan=$x['id_pelanggan'];
+					$nama=$x['nama'];
+					$username=$x['username'];
+					$password=$x['password'];
+					$email=$x['email'];
+					$alamat=$x['alamat'];
+					$no_telp=$x['no_telp'];
+					$jenis_kelamin=$x['jenis_kelamin'];
+			?>
+			<tr>
+				<td><?php echo $autonum;?></td>
+				<td><?php echo $id_pelanggan;?></td>
+				<td><?php echo $nama;?></td>
+				<td><?php echo $username;?></td>
+				<td><?php echo $password;?></td>
+				<td><?php echo $email;?></td>
+				<td><?php echo $alamat;?></td>
+				<td><?php echo $no_telp;?></td>
+				<td><?php echo $jenis_kelamin;?></td>
+			</tr>
+				<?php $autonum++; endforeach; ?>
+			</tbody>
 		</table>
 		
 	</div>
