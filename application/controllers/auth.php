@@ -36,4 +36,8 @@ public function registration()
 	}
 	
 }
+function logout(){
+	$this-> session-> session_destroy();
+	redirect ('');
+}
 }
