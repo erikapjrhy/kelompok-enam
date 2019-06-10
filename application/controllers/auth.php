@@ -1,47 +1,92 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller
-{
-public function __construct()
-{
-	parent::__construct();
-	$this->load->library('form_validation');
-}
-public function index()
- {
-	$this->load->view('templates/auth_header');
-	$this->load->view('auth/login');
-	$this->load->view('templates/auth_footer');
-} 
-public function registration()
-{
-	$this->form_validation->set_rules('username', 'Username', 'required|trim',['required'=>'Username kosong!']);
-	$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[5]|matches[password2]',['matches'=>'Password tidak sama!','min_length'=> 'Password maksimal 5 karakter!','required'=>'Password kosong!']);
-	$this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
-	$this->form_validation->set_rules('nama', 'Nama', 'required|trim',['required'=>'Nama kosong!']);
-	$this->form_validation->set_rules('alamat', 'Alamat', 'required|trim',['required'=>'Alamat kosong!']);
-	$this->form_validation->set_rules('no_telp', 'Nomor Telepon', 'required|trim',['required'=>'Nomor Telepon kosong!']);
+class Auth extends CI_Controller {
+	function __construct(){
+		parent::__construct();
+		$this->load->helper(array('url'));
+		$this->load->model('model_barang');
+	}
 
-
-
-	if($this->form_validation->run() == false){
-	$data['title'] = 'User Registration';
-	$this->load->view('templates/auth_header', $data);
-	$this->load->view('auth/registration');
-	$this->load->view('templates/auth_footer');
-	}else{
-		echo 'Data Berhasil ditambahkan !';
+	public function index ()
+	{
+		$data = array(
+		'data'=>$this->model_barang->get_data());
+		//var_dump ($data);
+		$this->load->view('app/index',$data);
 
 	}
+
+	function input(){
+			if (isset($_POST['btnTambah'])){
+			$data = $this->model_barang->input(array (
+			'id_barang' => $this->input->post('id_barang'),
+			'nama_barang' => $this->input->post('nama_barang'),
+			'ukuran' => $this->input->post('ukuran'),
+			'harga' => $this->input->post('harga'),
+			'stok' => $this->input->post('stok'),
+			'keterangan' => $this->input->post('keterangan'),
+			'id_kategori' => $this->input->post('id_kategori'),
+			'gambar' => $this->input->post('gambar')));
+			redirect('Auth');
+			}else{
+			  $x =$this->model_barang->get_kategori();
+			  
+			  $data = array(
+				'kategori_barang'=>$this->model_barang->get_kategori());
+			  $this->load->view('app/input_barang',$data);
+		}
+	}
+
+	// public function input()
+	// {
+	// 	$data = array();
+	// 	if($this->input->post('submit')){
+	// 		$upload = $this->model_barang->upload();
+
+	// 		if($upload['result'] == "success"){
+	// 			$this->model_barang->save($upload);
+
+	// 			redirect('Auth');
+	// 		} else {
+	// 			$data['message'] = $upload['error'];
+	// 		}
+	// 	}
+
+	// 	$this->load->view('app/input_barang', $data);
+	// }
+
+
+	function delete($id){
+		$this->model_barang->delete($id);
+		redirect('Auth');
+	}
+
+	function edit($id){
+		$id = $this->uri->segment(3);
+		//var_dump($id);
+		$data = array (
+			'user' => $this->model_barang->get_data_edit($id)
+		);
+		//var_dump($data);
+		$data ['id_kategori']=$this->model_barang->get_kategori();
+		
+		$this->load->view("app/edit_barang",$data);
+	}
 	
-}
-function logout(){
-	$this-> session-> session_destroy();
-	redirect ('');
-}
-function data_pelanggan(){
-	 $data = array('data'=>$this->models->data_pelanggan());
-        $this->load->view('v_data_pelanggan',$data);
-}
+	function update(){
+		$id = $this->input->post('id_barang');
+		//var_dump($id);
+		$insert=$this->model_barang->update(array(
+			'nama_barang' => $this->input->post('nama_barang'),
+			'ukuran' => $this->input->post('ukuran'),
+			'harga' => $this->input->post('harga'),
+			'stok' => $this->input->post('stok'),
+			'keterangan' => $this->input->post('keterangan'),
+			'id_kategori' => $this->input->post('id_kategori'),
+			'gambar' => $this->input->post('gambar')
+			), $id);
+		redirect('Auth');
+        }
+
 }
