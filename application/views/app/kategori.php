@@ -78,6 +78,20 @@
           <span>Pelanggan</span></a>
       </li>
 
+       <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Transaksi'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Transaksi</span></a>
+      </li>
+      
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Admin'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Admin</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 

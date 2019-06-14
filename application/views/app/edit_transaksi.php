@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Input Produk</title>
+  <title>Edit Transaksi</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -78,13 +78,13 @@
           <span>Pelanggan</span></a>
       </li>
 
-       <!-- Nav Item - Dashboard -->
+      <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('Transaksi'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Transaksi</span></a>
       </li>
-      
+
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('Admin'); ?>">
@@ -177,21 +177,28 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-           <h2> <p align="center"> Tambah Data Kategori Barang </p> </h2>
+           <h2> <p align="center"> Update Data Transaksi </p> </h2>
           <!-- Page Heading -->
         
           <!-- Content Row -->
           <div class="row">
 
-    <form method="POST" action="input" enctype="multipart/form-data">
-        
-        Id Kategori<br/><input type="text" name="id_kategori" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->id_kategori; } ?>"><br/><br/>
+    <form method="post" action="<?php echo base_url()?>Transaksi/update" enctype="multipart/form-data">
 
-        Nama Kategori <br/><input type="text" name="nama_kategori" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->nama_kategori; } ?>"><br/><br/>
+        ID Transaksi <br/><input type="text" name="id_transaksi" size="100" maxlength="10" value="<?php echo $user[0]['id_transaksi']; ?>"> <br/><br/>
 
-          
-         <input type="submit" name="btnTambah" value="Simpan"/>
-         <button> <a href="<?php echo base_url()?>Kategori/"> Kembali </button></a>
+        Tanggal Sewa <br/><input type="text" name="tanggal_sewa" size="100" maxlength="10" value="<?php echo $user[0]['tanggal_sewa']; ?>"> <br/><br/>
+
+        Tanggal Kembali <br/><input type="text" name="tanggal_kembali" size="100" maxlength="10" value="<?php echo $user[0]['tanggal_kembali']; ?>"> <br/><br/>
+
+        Total <br/><input type="text" name="total" size="100" maxlength="10" value="<?php echo $user[0]['total']; ?>"> <br/><br/>
+
+        ID Pelanggan <br/><input type="text" name="id_pelanggan" size="100" maxlength="10" value="<?php echo $user[0]['id_pelanggan']; ?>"> <br/><br/>
+
+        Gambar Konfirmasi <br/><input type="text" name="gambar_konfirm" size="100" maxlength="10" value="<?php echo $user[0]['gambar_konfirm']; ?>"> <br/><br/>
+         
+         <input type="submit" name="btnTambah" value="Simpan">
+         <button> <a href="<?php echo base_url()?>Transaksi/"> Kembali </button></a>
     </form>
 
 

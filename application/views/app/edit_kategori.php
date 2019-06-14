@@ -78,6 +78,20 @@
           <span>Pelanggan</span></a>
       </li>
 
+       <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Transaksi'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Transaksi</span></a>
+      </li>
+      
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Admin'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Admin</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -171,9 +185,9 @@
 
     <form method="post" action="<?php echo base_url()?>Kategori/update" enctype="multipart/form-data">
 
-        ID Kategori<br/><input type="text" name="id_kategori" size="135" maxlength="10" value="<?php echo $user[0]['id_kategori']; ?>"> <br/><br/>
+        ID Kategori<br/><input type="text" name="id_kategori" size="100" maxlength="10" value="<?php echo $user[0]['id_kategori']; ?>"> <br/><br/>
 
-        Nama Kategori <br/><input type="text" name="nama_kategori" size="135" maxlength="10" value="<?php echo $user[0]['nama_kategori']; ?>"> <br/><br/>
+        Nama Kategori <br/><input type="text" name="nama_kategori" size="100" maxlength="10" value="<?php echo $user[0]['nama_kategori']; ?>"> <br/><br/>
 
          
          <input type="submit" name="btnTambah" value="Simpan">

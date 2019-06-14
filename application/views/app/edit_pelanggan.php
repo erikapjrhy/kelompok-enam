@@ -78,6 +78,20 @@
           <span>Pelanggan</span></a>
       </li>
 
+       <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Transaksi'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Transaksi</span></a>
+      </li>
+      
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Admin'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Admin</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -171,21 +185,21 @@
 
     <form method="post" action="<?php echo base_url()?>Pelanggan/update" enctype="multipart/form-data">
 
-        ID Pelanggan <br/><input type="text" name="id_pelanggan" size="135" maxlength="10" value="<?php echo $user[0]['id_pelanggan']; ?>"> <br/><br/>
+        ID Pelanggan <br/><input type="text" name="id_pelanggan" size="100" maxlength="10" value="<?php echo $user[0]['id_pelanggan']; ?>"> <br/><br/>
 
-        Nama <br/><input type="text" name="nama" size="135" maxlength="10" value="<?php echo $user[0]['nama']; ?>"> <br/><br/>
+        Nama <br/><input type="text" name="nama" size="100" maxlength="10" value="<?php echo $user[0]['nama']; ?>"> <br/><br/>
 
-        Username <br/><input type="text" name="username" size="135" maxlength="10" value="<?php echo $user[0]['username']; ?>"> <br/><br/>
+        Username <br/><input type="text" name="username" size="100" maxlength="10" value="<?php echo $user[0]['username']; ?>"> <br/><br/>
 
-        Password <br/><input type="text" name="password" size="135" maxlength="10" value="<?php echo $user[0]['password']; ?>"> <br/><br/>
+        Password <br/><input type="text" name="password" size="100" maxlength="10" value="<?php echo $user[0]['password']; ?>"> <br/><br/>
 
-        Email <br/><input type="text" name="email" size="135" maxlength="10" value="<?php echo $user[0]['email']; ?>"> <br/><br/>
+        Email <br/><input type="text" name="email" size="100" maxlength="10" value="<?php echo $user[0]['email']; ?>"> <br/><br/>
 
-        Alamat <br/><input type="text" name="alamat" size="135" maxlength="10" value="<?php echo $user[0]['alamat']; ?>"> <br/><br/>
+        Alamat <br/><input type="text" name="alamat" size="100" maxlength="10" value="<?php echo $user[0]['alamat']; ?>"> <br/><br/>
 
-        No Telepon <br/><input type="file" name="no_telp" size="135" maxlength="10" value="<?php echo $user[0]['no_telp']; ?>"> <br/><br/>
+        No Telepon <br/><input type="file" name="no_telp" size="100" maxlength="10" value="<?php echo $user[0]['no_telp']; ?>"> <br/><br/>
 
-        Jenis Kelamin <br/><input type="file" name="jenis_kelamin" size="135" maxlength="10" value="<?php echo $user[0]['jenis_kelamin']; ?>"> <br/><br/>
+        Jenis Kelamin <br/><input type="file" name="jenis_kelamin" size="100" maxlength="10" value="<?php echo $user[0]['jenis_kelamin']; ?>"> <br/><br/>
 
 
          

@@ -78,6 +78,21 @@
           <span>Pelanggan</span></a>
       </li>
 
+       <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Transaksi'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Transaksi</span></a>
+      </li>
+      
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Admin'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Admin</span></a>
+      </li>
+
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -171,17 +186,17 @@
 
     <form method="post" action="<?php echo base_url()?>Auth/update" enctype="multipart/form-data">
 
-        ID Barang <br/><input type="text" name="id_barang" size="135" maxlength="10" value="<?php echo $user[0]['id_barang']; ?>"> <br/><br/>
+        ID Barang <br/><input type="text" name="id_barang" size="100" maxlength="10" value="<?php echo $user[0]['id_barang']; ?>"> <br/><br/>
 
-        Nama Barang <br/><input type="text" name="nama_barang" size="135" maxlength="10" value="<?php echo $user[0]['nama_barang']; ?>"> <br/><br/>
+        Nama Barang <br/><input type="text" name="nama_barang" size="100" maxlength="10" value="<?php echo $user[0]['nama_barang']; ?>"> <br/><br/>
 
-        Ukuran <br/><input type="text" name="ukuran" size="135" maxlength="10" value="<?php echo $user[0]['ukuran']; ?>"> <br/><br/>
+        Ukuran <br/><input type="text" name="ukuran" size="100" maxlength="10" value="<?php echo $user[0]['ukuran']; ?>"> <br/><br/>
 
-        Harga <br/><input type="text" name="harga" size="135" maxlength="10" value="<?php echo $user[0]['harga']; ?>"> <br/><br/>
+        Harga <br/><input type="text" name="harga" size="100" maxlength="10" value="<?php echo $user[0]['harga']; ?>"> <br/><br/>
 
-        Stok <br/><input type="text" name="stok" size="135" maxlength="10" value="<?php echo $user[0]['stok']; ?>"> <br/><br/>
+        Stok <br/><input type="text" name="stok" size="100" maxlength="10" value="<?php echo $user[0]['stok']; ?>"> <br/><br/>
 
-        Keterangan <br/><input type="text" name="stok" size="135" maxlength="10" value="<?php echo $user[0]['keterangan']; ?>"> <br/><br/>
+        Keterangan <br/><input type="text" name="stok" size="100" maxlength="10" value="<?php echo $user[0]['keterangan']; ?>"> <br/><br/>
 
         ID Kategori <br/>
         <?php
@@ -198,7 +213,7 @@
         ?>
         <br/><br/>
 
-        Gambar <br/><input type="file" name="stok" size="135" maxlength="10" value="<?php echo $user[0]['gambar']; ?>"> <br/><br/>
+        Gambar <br/><input type="file" name="stok" size="100" maxlength="10" value="<?php echo $user[0]['gambar']; ?>"> <br/><br/>
 
          
          <input type="submit" name="btnTambah" value="Simpan">

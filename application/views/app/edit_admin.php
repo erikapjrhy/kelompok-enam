@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Input Produk</title>
+  <title>Edit Admin</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -78,7 +78,7 @@
           <span>Pelanggan</span></a>
       </li>
 
-       <!-- Nav Item - Dashboard -->
+      <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('Transaksi'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -177,21 +177,28 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-           <h2> <p align="center"> Tambah Data Kategori Barang </p> </h2>
+           <h2> <p align="center"> Update Data Admin </p> </h2>
           <!-- Page Heading -->
         
           <!-- Content Row -->
           <div class="row">
 
-    <form method="POST" action="input" enctype="multipart/form-data">
-        
-        Id Kategori<br/><input type="text" name="id_kategori" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->id_kategori; } ?>"><br/><br/>
+    <form method="post" action="<?php echo base_url()?>Pelanggan/update" enctype="multipart/form-data">
 
-        Nama Kategori <br/><input type="text" name="nama_kategori" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->nama_kategori; } ?>"><br/><br/>
+        ID Admin <br/><input type="text" name="id_admin" size="100" maxlength="10" value="<?php echo $user[0]['id_admin']; ?>"> <br/><br/>
 
-          
-         <input type="submit" name="btnTambah" value="Simpan"/>
-         <button> <a href="<?php echo base_url()?>Kategori/"> Kembali </button></a>
+        Username <br/><input type="text" name="username" size="100" maxlength="10" value="<?php echo $user[0]['username']; ?>"> <br/><br/>
+
+        Password <br/><input type="text" name="password" size="100" maxlength="10" value="<?php echo $user[0]['password']; ?>"> <br/><br/>
+
+       Nama <br/><input type="text" name="nama" size="100" maxlength="10" value="<?php echo $user[0]['nama']; ?>"> <br/><br/>
+
+        Alamat <br/><input type="text" name="alamat" size="100" maxlength="10" value="<?php echo $user[0]['alamat']; ?>"> <br/><br/>
+
+        No Telepon <br/><input type="file" name="no_telp" size="100" maxlength="10" value="<?php echo $user[0]['no_telp']; ?>"> <br/><br/>
+         
+         <input type="submit" name="btnTambah" value="Simpan">
+         <button> <a href="<?php echo base_url()?>Admin/"> Kembali </button></a>
     </form>
 
 

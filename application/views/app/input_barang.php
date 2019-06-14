@@ -78,6 +78,20 @@
           <span>Pelanggan</span></a>
       </li>
 
+       <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Transaksi'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Transaksi</span></a>
+      </li>
+      
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Admin'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Admin</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -171,17 +185,17 @@
 
     <form method="POST" action="input" enctype="multipart/form-data">
         
-        Id Barang<br/><input type="text" name="id_barang" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->id_barang; } ?>"><br/><br/>
+        Id Barang<br/><input type="text" name="id_barang" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->id_barang; } ?>"><br/><br/>
 
-        Nama Barang <br/><input type="text" name="nama_barang" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->nama_barang; } ?>"><br/><br/>
+        Nama Barang <br/><input type="text" name="nama_barang" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->nama_barang; } ?>"><br/><br/>
 
-        Ukuran <br/><input type="text" name="ukuran" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->ukuran; } ?>"><br/><br/>
+        Ukuran <br/><input type="text" name="ukuran" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->ukuran; } ?>"><br/><br/>
 
-        Harga <br/><input type="text" name="harga" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->harga; } ?>"><br/><br/>
+        Harga <br/><input type="text" name="harga" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->harga; } ?>"><br/><br/>
 
-        Stok <br/><input type="text" name="stok" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->stok; } ?>"><br/><br/>
+        Stok <br/><input type="text" name="stok" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->stok; } ?>"><br/><br/>
 
-        Keterangan <br/><input type="text" name="keterangan" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->keterangan; } ?>"><br/><br/>
+        Keterangan <br/><input type="text" name="keterangan" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->keterangan; } ?>"><br/><br/>
 
         ID Kategori <br/>
         <select name="id_kategori">
@@ -192,7 +206,7 @@
         <br/><br/>
 
         Gambar <br/>
-        <input type="file" name="gambar" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->gambar; } ?>"><br/><br/>
+        <input type="file" name="gambar" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->gambar; } ?>"><br/><br/>
          <input type="submit" name="btnTambah" value="Simpan"/>
          <button> <a href="<?php echo base_url()?>Auth/"> Kembali</a> </button>
     </form>

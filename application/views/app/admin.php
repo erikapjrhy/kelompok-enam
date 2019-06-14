@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Input Produk</title>
+  <title>Admin</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -78,7 +78,7 @@
           <span>Pelanggan</span></a>
       </li>
 
-       <!-- Nav Item - Dashboard -->
+      <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('Transaksi'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -177,23 +177,43 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-           <h2> <p align="center"> Tambah Data Kategori Barang </p> </h2>
+           <h2> <p align="center"> Data Admin </p> </h2>
           <!-- Page Heading -->
         
           <!-- Content Row -->
           <div class="row">
 
-    <form method="POST" action="input" enctype="multipart/form-data">
-        
-        Id Kategori<br/><input type="text" name="id_kategori" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->id_kategori; } ?>"><br/><br/>
-
-        Nama Kategori <br/><input type="text" name="nama_kategori" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->nama_kategori; } ?>"><br/><br/>
-
-          
-         <input type="submit" name="btnTambah" value="Simpan"/>
-         <button> <a href="<?php echo base_url()?>Kategori/"> Kembali </button></a>
-    </form>
-
+            <p> <a href="<?php echo base_url()?>Admin/input" class="btn btn-primary"> Tambah Admin </a> </p>
+            <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID Admin</th>
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Alamat</th>
+      <th scope="col">No Telepon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+                $no = 1;
+                foreach ($data as $row): ?>
+    <tr>
+      <td><?php echo $row->id_admin;?></td>
+      <td><?php echo $row->username;?></td>
+      <td><?php echo $row->password;?></td>
+      <td><?php echo $row->nama;?></td>
+      <td><?php echo $row->alamat;?></td>
+      <td><?php echo $row->no_telp;?></td>
+      <td> <a href="<?php echo base_url(); ?>Admin/delete/<?php echo $row->id_admin;?>" class="btn btn-danger">hapus</a> </td>
+      <td> <a href="<?php echo base_url(); ?>Admin/edit/<?php echo $row->id_admin;?>" class="btn btn-warning">edit</a> </td>
+      </td>
+    </tr>
+   <?php $no++;
+                endforeach;?>
+  </tbody>
+</table>
 
 
 
@@ -263,6 +283,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>

@@ -78,6 +78,20 @@
           <span>Pelanggan</span></a>
       </li>
 
+       <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Transaksi'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Transaksi</span></a>
+      </li>
+      
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('Admin'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Admin</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -171,21 +185,21 @@
 
     <form method="POST" action="input" enctype="multipart/form-data">
         
-        ID Pelanggan <br/><input type="text" name="id_pelanggan" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->id_pelanggan; } ?>"><br/><br/>
+        ID Pelanggan <br/><input type="text" name="id_pelanggan" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->id_pelanggan; } ?>"><br/><br/>
 
-        Nama Pelanggan <br/><input type="text" name="nama" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->nama; } ?>"><br/><br/>
+        Nama Pelanggan <br/><input type="text" name="nama" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->nama; } ?>"><br/><br/>
 
-        Username <br/><input type="text" name="username" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->username; } ?>"><br/><br/>
+        Username <br/><input type="text" name="username" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->username; } ?>"><br/><br/>
 
-        Password <br/><input type="text" name="password" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->password; } ?>"><br/><br/>
+        Password <br/><input type="text" name="password" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->password; } ?>"><br/><br/>
 
-        Email <br/><input type="text" name="email" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->email; } ?>"><br/><br/>
+        Email <br/><input type="text" name="email" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->email; } ?>"><br/><br/>
 
-        Alamat <br/><input type="text" name="alamat" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->alamat; } ?>"><br/><br/>
+        Alamat <br/><input type="text" name="alamat" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->alamat; } ?>"><br/><br/>
 
-        No Telepon <br/><input type="text" name="no_telp" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->no_telp; } ?>"><br/><br/>
+        No Telepon <br/><input type="text" name="no_telp" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->no_telp; } ?>"><br/><br/>
 
-        Jenis Kelamin <br/><input type="text" name="jenis_kelamin" size="130" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->jenis_kelamin; } ?>"><br/><br/>
+        Jenis Kelamin <br/><input type="text" name="jenis_kelamin" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->jenis_kelamin; } ?>"><br/><br/>
 
 
           
