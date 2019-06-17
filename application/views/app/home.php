@@ -173,17 +173,21 @@
           <!-- Page Heading -->
         
           <!-- Content Row -->
-          <div class="row">
+                <div class="row">
             <div class="container">
 <div class="jumbotron mt-3">
-        <h1 class="display-4">Selamat Datang di Website Saya</h1>
-        <p class="lead">Selamat Datang Hoiril Anwar</p>
+        <h1 class="display-4">Selamat Datang di Website Kami</h1>
+        <p class="lead">Anggota Kelompok</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <p>Hoiril Anwar [E31171868]</p>
+        <p>Erika Puji Rahayu [E31172116]</p>
+        <p>Khafifah Faizatul M. [E31172233]</p>
+        <p>Agung Putra [E31171809]</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Kelompok 6</a>
 </div>
 </div>
           </div>
+
 
           <!-- Content Row -->
 
