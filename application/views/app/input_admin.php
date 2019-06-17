@@ -179,9 +179,9 @@
         
         ID Admin <br/><input type="text" name="id_admin" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->id_admin; } ?>"><br/><br/>
 
-        Username <br/><input type="text" name="username" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->username; } ?>"><br/><br/>
+        Username <br/><input type="text" name="username" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->USERNAME; } ?>"><br/><br/>
 
-        Password <br/><input type="text" name="password" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->password; } ?>"><br/><br/>
+        Password <br/><input type="text" name="password" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->PASSWORD; } ?>"><br/><br/>
 
         Nama <br/><input type="text" name="nama" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->nama; } ?>"><br/><br/>
 

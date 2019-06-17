@@ -21,8 +21,8 @@ class Admin extends CI_Controller {
 			if (isset($_POST['btnTambah'])){
 			$data = $this->model_admin->input(array (
 			'id_admin' => $this->input->post('id_admin'),
-			'username' => $this->input->post('username'),
-			'password' => $this->input->post('password'),
+			'USERNAME' => $this->input->post('username'),
+			'PASSWORD' => $this->input->post('password'),
 			'nama' => $this->input->post('nama'),
 			'alamat' => $this->input->post('alamat'),
 			'no_telp' => $this->input->post('no_telp')
@@ -53,8 +53,8 @@ class Admin extends CI_Controller {
 		//var_dump($id);
 		$insert=$this->model_admin->update(array(
 			'id_admin' => $this->input->post('id_admin'),
-			'username' => $this->input->post('username'),
-			'password' => $this->input->post('password'),
+			'USERNAME' => $this->input->post('username'),
+			'PASSWORD' => $this->input->post('password'),
 			'nama' => $this->input->post('nama'),
 			'alamat' => $this->input->post('alamat'),
 			'no_telp' => $this->input->post('no_telp')

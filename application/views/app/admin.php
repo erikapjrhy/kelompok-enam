@@ -193,8 +193,8 @@
                 foreach ($data as $row): ?>
     <tr>
       <td><?php echo $row->id_admin;?></td>
-      <td><?php echo $row->username;?></td>
-      <td><?php echo $row->password;?></td>
+      <td><?php echo $row->USERNAME;?></td>
+      <td><?php echo $row->PASSWORD;?></td>
       <td><?php echo $row->nama;?></td>
       <td><?php echo $row->alamat;?></td>
       <td><?php echo $row->no_telp;?></td>

@@ -175,19 +175,19 @@
           <!-- Content Row -->
           <div class="row">
 
-    <form method="post" action="<?php echo base_url()?>Pelanggan/update" enctype="multipart/form-data">
+    <form method="post" action="<?php echo base_url()?>Admin/update" enctype="multipart/form-data">
 
         ID Admin <br/><input type="text" name="id_admin" size="100" maxlength="10" value="<?php echo $user[0]['id_admin']; ?>"> <br/><br/>
 
-        Username <br/><input type="text" name="username" size="100" maxlength="10" value="<?php echo $user[0]['username']; ?>"> <br/><br/>
+        Username <br/><input type="text" name="username" size="100" maxlength="10" value="<?php echo $user[0]['USERNAME']; ?>"> <br/><br/>
 
-        Password <br/><input type="text" name="password" size="100" maxlength="10" value="<?php echo $user[0]['password']; ?>"> <br/><br/>
+        Password <br/><input type="text" name="password" size="100" maxlength="10" value="<?php echo $user[0]['PASSWORD']; ?>"> <br/><br/>
 
        Nama <br/><input type="text" name="nama" size="100" maxlength="10" value="<?php echo $user[0]['nama']; ?>"> <br/><br/>
 
         Alamat <br/><input type="text" name="alamat" size="100" maxlength="10" value="<?php echo $user[0]['alamat']; ?>"> <br/><br/>
 
-        No Telepon <br/><input type="file" name="no_telp" size="100" maxlength="10" value="<?php echo $user[0]['no_telp']; ?>"> <br/><br/>
+        No Telepon <br/><input type="text" name="no_telp" size="100" maxlength="10" value="<?php echo $user[0]['no_telp']; ?>"> <br/><br/>
          
          <input type="submit" name="btnTambah" value="Simpan">
          <button> <a href="<?php echo base_url()?>Admin/"> Kembali </button></a>
