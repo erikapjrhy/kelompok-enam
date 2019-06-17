@@ -205,8 +205,8 @@
         ?>
         <br/><br/>
 
-        Gambar <br/><input type="file" name="stok" size="100" maxlength="10" value="<?php echo $user[0]['gambar']; ?>"> <br/><br/>
-
+     <!--    Gambar <br/><input type="file" name="stok" size="100" maxlength="10" value="<?php echo $user[0]['gambar']; ?>"> <br/><br/>
+ -->
          
          <input type="submit" name="btnTambah" value="Simpan">
          <button> <a href="<?php echo base_url()?>Auth/"> Kembali </button></a>

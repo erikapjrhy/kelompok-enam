@@ -11,10 +11,10 @@ class model_barang extends CI_Model {
 		//return $query->result_array();
 	}
 
-	// function get_kategori(){
-	// 	$query = $this->db->query("SELECT * FROM kategori_barang");
-	// 	return $query->result();
-	// }
+	function get_kategori(){
+		$query = $this->db->query("SELECT * FROM kategori_barang");
+		return $query->result();
+	}
 
 	public function upload(){
 		$config['upload_path'] = './images/';

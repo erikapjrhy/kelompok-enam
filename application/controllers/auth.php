@@ -70,7 +70,7 @@ class Auth extends CI_Controller {
 			'user' => $this->model_barang->get_data_edit($id)
 		);
 		//var_dump($data);
-		// $data ['id_kategori']=$this->model_barang->get_kategori();
+		$data ['id_kategori']=$this->model_barang->get_kategori();
 		
 		$this->load->view("app/edit_barang",$data);
 	}
@@ -84,8 +84,7 @@ class Auth extends CI_Controller {
 			'harga' => $this->input->post('harga'),
 			'stok' => $this->input->post('stok'),
 			'keterangan' => $this->input->post('keterangan'),
-			'id_kategori' => $this->input->post('id_kategori'),
-			'gambar' => $this->input->post('gambar')
+			'id_kategori' => $this->input->post('id_kategori')
 			), $id);
 		redirect('Auth');
         }
