@@ -50,15 +50,6 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Profile</span></a>
-      </li>
-
-       <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('Auth'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Barang</span></a>
@@ -161,7 +152,7 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <a class="btn btn-danger square-btn-adjust" href="<?php echo site_url('Login/logout') ?>">
                 
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout

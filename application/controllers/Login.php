@@ -13,7 +13,7 @@ class login extends CI_Controller
 	}
 
 	function index(){
-		if (!empty($this->session->userdata("username")))
+		if (!empty($this->session->userdata("USERNAME")))
 			redirect(base_url("home"));
 
 		$this->load->view("v_login");
@@ -28,13 +28,13 @@ class login extends CI_Controller
 			$this->session->set_userdata((array)$user);
 			redirect(base_url("home"));
 		}else{
-			redirect("Home");
+			redirect($this->index());
 		}
 	}
 
-	function logout(){
-		$array_items = array('id_admin','username','password','nama','alamat','no_telp');
-		$this->session->unset_userdata($array_items);
+public function logout()
+	{
+		$this->session->sess_destroy();
 		redirect($this->index());
 	}
 }
