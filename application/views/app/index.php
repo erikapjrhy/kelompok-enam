@@ -183,7 +183,7 @@
           <!-- Content Row -->
           <div class="row">
 
-            <p> <a href="<?php echo base_url()?>Auth/input" class="btn btn-primary"> Tambah Produk </a> </p>
+            <p> <a href="<?php echo base_url()?>Auth/tambah" class="btn btn-primary"> Tambah Produk </a> </p>
             <table class="table table-striped">
   <thead>
     <tr>
@@ -209,7 +209,9 @@
       <td><?php echo $row->stok;?></td>
       <td><?php echo $row->keterangan;?></td>
       <td><?php echo $row->id_kategori;?></td>
-      <td><?php echo $row->gambar;?></td>
+     <td>
+        <img src="<?php echo base_url(); ?>/images/<?php echo $row->gambar;?>" width ="100" >
+      </td>
       <td> <a href="<?php echo base_url(); ?>Auth/delete/<?php echo $row->id_barang;?>" class="btn btn-danger">hapus</a> </td>
       <td> <a href="<?php echo base_url(); ?>Auth/edit/<?php echo $row->id_barang;?>" class="btn btn-warning">edit</a> </td>
       </td>

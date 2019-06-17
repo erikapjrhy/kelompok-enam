@@ -183,7 +183,7 @@
           <!-- Content Row -->
           <div class="row">
 
-    <form method="POST" action="input" enctype="multipart/form-data">
+    <!-- <form method="POST" action="input" enctype="multipart/form-data">
         
         Id Barang<br/><input type="text" name="id_barang" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->id_barang; } ?>"><br/><br/>
 
@@ -209,7 +209,52 @@
         <input type="file" name="gambar" size="100" maxlength="10" value="<?php if(isset($data)) { echo $data[0]->gambar; } ?>"><br/><br/>
          <input type="submit" name="btnTambah" value="Simpan"/>
          <button> <a href="<?php echo base_url()?>Auth/"> Kembali</a> </button>
-    </form>
+    </form> -->
+
+    <?php echo form_open("Auth/tambah", array('enctype'=>'multipart/form-data')); ?>
+  <table cellpadding="8">
+    <tr>
+      <td>ID Barang</td>
+      <td><input type="text" name="id_barang" size="120" maxlength="10" value="<?php echo set_value('id_barang'); ?>"></td>
+    </tr>
+    <tr>
+      <td>Nama</td>
+      <td><input type="text" name="nama_barang" size="120" maxlength="10" value="<?php echo set_value('nama_barang'); ?>"></td>
+    </tr>
+    <tr>
+      <td>Ukuran</td>
+      <td><input type="text" name="ukuran" size="120" maxlength="10" value="<?php echo set_value('ukuran'); ?>"></td>
+    </tr>
+     <tr>
+      <td>Harga</td>
+      <td><input type="text" name="harga" size="120" maxlength="10" value="<?php echo set_value('harga'); ?>"></td>
+    </tr>
+     <tr>
+      <td>Stok</td>
+      <td><input type="text" name="stok" size="120" maxlength="10" value="<?php echo set_value('stok'); ?>"></td>
+    </tr>
+     <tr>
+      <td>Keterangan</td>
+      <td><input type="text" name="keterangan" size="120" maxlength="10" value="<?php echo set_value('keterangan'); ?>"></td>
+    </tr>
+     <tr>
+      <td>ID Kategori</td>                   
+      <td><select class="form-control" name="id_kategori" id="id_kategori">
+          <option value="UP">UP</option>
+          <option value="UT">UT</option>
+          <option value="W">W</option>
+          <?php echo set_value('id_kategori'); ?>"></td>
+    </tr>
+    <tr>
+      <td>Foto</td>
+      <td><input type="file" name="gambar"></td>
+    </tr>
+  </table>
+    
+  <hr>
+  <input type="submit" name="submit" value="Simpan">
+  <a href="<?php echo base_url(); ?>"><input type="button" value="Batal"></a>
+    <?php echo form_close(); ?>
 
 
 
